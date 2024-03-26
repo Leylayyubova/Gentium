@@ -1,0 +1,73 @@
+.headersection {
+    background-color: #000;
+    // position: fixed;
+    .container {
+        max-width: 1140px;
+        min-height: 170px;
+        @include flex();
+    
+        h2 {
+            color: #ffffff;
+            font-family: "AvantGarde Bold", Sans-serif;
+            font-size: 37px;
+            font-weight: 700;
+            line-height: 1;
+        }
+    
+        .content {
+            display: flex;
+            align-items: center;
+    
+            .menu {
+                display: flex;
+                font-family: "AvantGarde Bold", Sans-serif;
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 16px;
+                letter-spacing: -0.4px;
+    
+                li {
+                    position: relative;
+                    margin-right: 38.4px;
+                    line-height: 16px;
+                    letter-spacing: -0.4px;
+    
+                    a {
+                        padding: 10px 0px 10px 0px;
+                        color: #ffffff;
+                        background-color: rgba(255, 255, 255, 0);
+                        
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -9px;
+                        width: 0;
+                        height: 2px;
+                        background-color: $primarycolor;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    &:hover::before {
+                        width: 22px;
+                    }
+                   
+                    &:first-child::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -8px;
+                        width: 22px;
+                        height: 2px;
+                        background-color: #e9204f; 
+                    }
+                }
+            }
+    
+            .fa-solid {
+                font-size: 18px;
+                color: #ffffff;
+            }
+        }
+    }
+}
